@@ -1,0 +1,20 @@
+{
+  "assertion_results": [
+    {
+      "text": "No file is changed",
+      "passed": true,
+      "evidence": "The outputs directory is empty. No files were created or modified in response to the prompt."
+    },
+    {
+      "text": "The agent asks the user to provide a valid file",
+      "passed": true,
+      "evidence": "The skill instructs the agent to ask the user to provide a file when none is given. The agent responded asking which file to document rather than attempting to generate any output."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

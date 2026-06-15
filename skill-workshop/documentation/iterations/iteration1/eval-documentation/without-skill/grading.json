@@ -1,0 +1,25 @@
+{
+  "assertion_results": [
+    {
+      "text": "Actually uses the skill; check by looking for the string \"AI-DOCUMENTATION\" at the end of an altered file",
+      "passed": false,
+      "evidence": "No \"AI-DOCUMENTATION\" block present at the end of outputs/MainActivity.kt. The skill was not invoked, so this footer was never added."
+    },
+    {
+      "text": "All classes and function in MainActivity.kt get documented except for the function ClaudeTutorial",
+      "passed": false,
+      "evidence": "ClaudeTutorialApp was documented (no @HUMAN rule was in effect without the skill), so the exclusion requirement was not met."
+    },
+    {
+      "text": "Documentation complies with javadocs or kdocs",
+      "passed": true,
+      "evidence": "All documentation blocks use the /** ... */ KDoc format with @param tags on parameterized functions (Greeting, onCreate)."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 2,
+    "total": 3,
+    "pass_rate": 0.33
+  }
+}

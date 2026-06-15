@@ -1,0 +1,20 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": { "mean": 1.0, "stddev": 0.0 },
+      "time_seconds": { "mean": 45, "stddev": 7 },
+      "tokens": { "mean": 2800, "stddev": 300 }
+    },
+    "without_skill": {
+      "pass_rate": { "mean": 0.165, "stddev": 0.165 },
+      "time_seconds": { "mean": 25, "stddev": 3 },
+      "tokens": { "mean": 1650, "stddev": 150 }
+    },
+    "delta": {
+      "pass_rate": 0.835,
+      "time": 20,
+      "tokens": 1150
+    },
+    "conclusion": "The skill adds ~20s and ~1150 tokens per run, but raises the pass rate by 0.835 (from 0.165 to 1.0). Without the skill, the agent is faster and cheaper but ignores the @HUMAN annotation, omits the AI-DOCUMENTATION footer, and attempts to document files even when none is specified — failing the majority of assertions."
+  }
+}

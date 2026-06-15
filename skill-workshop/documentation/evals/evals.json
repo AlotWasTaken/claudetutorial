@@ -1,0 +1,26 @@
+{
+  "skill_name": "documentation",
+  "evals": [
+    {
+      "id": 1,
+      "name": "eval-documentation",
+      "prompt": "Can you generate documentation for MainActivity.kt?",
+      "expected_output": "The file should have javadoc documentations only the highest class name, since all test methods are marked as @HUMAN",
+      "assertions": [
+        "1.) Actually uses the skill; check by looking for the string \"AI-DOCUMENTATION\" at the end of an altered file",
+        "2.) All classes and function in MainActivity.kt get documented except for the function ClaudeTutorialApp since it has @HUMAN",
+        "3.) Documentation complies with javadocs or kdocs"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "eval-no-file-provided",
+      "prompt": "make me some documentation",
+      "expected_output": "The user is asked to try again, since no file was provided",
+      "assertions": [
+        "1.) No file is changed",
+        "2.) The agent asks the user to provide a valid file"
+      ]
+    }
+  ]
+}

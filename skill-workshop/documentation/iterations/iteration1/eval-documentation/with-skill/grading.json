@@ -1,0 +1,25 @@
+{
+  "assertion_results": [
+    {
+      "text": "Actually uses the skill; check by looking for the string \"AI-DOCUMENTATION\" at the end of an altered file",
+      "passed": true,
+      "evidence": "Output file ends with a /** AI-DOCUMENTATION ... */ block containing a bulleted list of AI-generated changes. String \"AI-DOCUMENTATION\" is present in outputs/MainActivity.kt."
+    },
+    {
+      "text": "All classes and function in MainActivity.kt get documented except for the function ClaudeTutorial",
+      "passed": true,
+      "evidence": "MainActivity, onCreate, AppDestinations, Greeting, and GreetingPreview all received KDoc headers. ClaudeTutorialApp was correctly skipped because it carries the @HUMAN annotation."
+    },
+    {
+      "text": "Documentation complies with javadocs or kdocs",
+      "passed": true,
+      "evidence": "All documentation blocks use the /** ... */ KDoc format with @param tags on parameterized functions (Greeting, onCreate)."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}

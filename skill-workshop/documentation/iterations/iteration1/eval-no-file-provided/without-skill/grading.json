@@ -1,0 +1,20 @@
+{
+  "assertion_results": [
+    {
+      "text": "No file is changed",
+      "passed": false,
+      "evidence": "outputs/MainActivity.kt was created. Without the skill's rule to ask for a file first, the agent assumed MainActivity.kt and generated documentation for it."
+    },
+    {
+      "text": "The agent asks the user to provide a valid file",
+      "passed": false,
+      "evidence": "The agent did not ask for clarification. It inferred the most prominent file in the project and proceeded directly to documenting it."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}
